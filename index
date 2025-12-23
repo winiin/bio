@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне - Личный сайт</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+           
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .photo-section {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        
+        .avatar {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #f0f4ff;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .avatar:hover {
+            transform: scale(1.03);
+        }
+        
+        .content {
+            flex: 2;
+            min-width: 300px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #6a11cb;
+            font-size: 1.8rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        
+        .lists-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .interests, .goals {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .interests li {
+            list-style-type: none;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .interests li:before {
+            content: "✓";
+            color: #6a11cb;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .goals li {
+            padding-left: 10px;
+        }
+        
+        .social-links {
+            text-align: center;
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-links h2 {
+            color: white;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .social-button {
+            display: inline-block;
+            background-color: white;
+            color: #2575fc;
+            text-decoration: none;
+            padding: 15px 30px;
+            margin: 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: #f0f4ff;
+        }
+        
+        .github {
+            color: #333;
+        }
+        
+        .youtube {
+            color: #ff0000;
+        }
+        
+        .instagram {
+            color: #e1306c;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .container, .lists-container {
+                flex-direction: column;
+            }
+            
+            .avatar {
+                width: 220px;
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Байгабулова Дениза</h1>
+        <p class="subtitle">Веб-разработчик и дизайнер</p>
+    </header>
+    
+    <div class="container">
+        <div class="photo-section">
+            <img src="https://i.pinimg.com/736x/08/4d/3b/084d3bf201b9a53d17404480562c8cbe.jpg" alt="Фотография Байгабулова Дениза" class="avatar">
+            <h2>Моя фотография</h2>
+            <p>Это моя аватарка, которая представляет меня в интернете</p>
+        </div>
+        
+        <div class="content">
+            <h2>Обо мне</h2>
+            <p>Привет! Меня зовут Дениза, и я участница проекта AITK. Я родилась и выросла в Алмате.</p>
+            
+            <p>Свою профессиональную карьеру я начала в сфере IT.</p>
+            
+            <p>На сегодняшний день я учу HTML, CSS, JavaScript и основы нескольких фреймворков. Я хочу создавать удобные, современные и красивые интерфейсы, которые решают реальные проблемы пользователей. </p>
+            
+            <p>В свободное время я люблю изучать ИИ, а так же хочу участвовать в хакатонах.</p>
+            
+            <p>Моя главная цель — стать высококвалифицированной fullstack-разработчиком и создавать продукты, которые будут полезны тысячам людей по всему миру. Я убеждена, что программирование — это не просто профессия, а способ мышления и творчества.</p>
+        </div>
+    </div>
+    
+    <div class="lists-container">
+        <div class="interests">
+            <h2>Мои интересы</h2>
+            <ul>
+                <li>Веб-разработка и программирование</li>
+                <li>Дизайн пользовательских интерфейсов (UI/UX)</li>
+                <li>Изучение новых технологий и фреймворков</li>
+                <li>Фотография и обработка изображений</li>
+                <li>Написание книг</li>
+                <li>Настольные и компьютерные игры</li>
+            </ul>
+        </div>
+        
+        <div class="goals">
+            <h2>Мои цели</h2>
+            <ol>
+        
+                <li>изучить  backend-разработку на Node.js</li>
+                <li>Создать собственный полноценный веб-проект с нуля</li>
+                <li>Найти работу в IT-компании в качестве фронтенд-разработчика</li>
+                <li>Изучить английский язык на уровне Advanced</li>
+                <li>Принять участие в международном хакатоне</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div class="social-links">
+        <h2>Мои социальные сети</h2>
+        <p>Вы можете найти меня в следующих сервисах:</p>
+        <a href="https://github.com/winiin" target="_blank" class="social-button github">Мой GitHub</a>
+          <a href="https://youtube.com/@wini_ni?si=PB65ckxJSCf8VM2R" target="_blank" class="social-button youtube">Мой YouTube</a>
+            <a href="https://www.instagram.com/winnin_ni?igsh=OW5mMnc4czU3ZTEx&utm_source=qr" target="_blank" class="social-button instagram">Мой Instagram</a>
+        <a href="https://www.tiktok.com/@winnini_mini?_r=1&_t=ZM-92R4R1frpRk" target="_blank" class="social-button tiktok">Мой Ti
+    </div>
+    
+    <footer>
+        <p>© 2025 Личный сайт "Обо мне". Все права защищены.</p>
+        <p>Сайт создан в рамках домашнего задания</p>
+    </footer>
+</body>
+</html>
